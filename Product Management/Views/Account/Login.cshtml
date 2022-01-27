@@ -1,0 +1,39 @@
+﻿@model Product_Management.Models.LoginViewModal
+@{
+    Layout = "_Layout1";
+}
+
+<body>
+
+
+    <div class="row justify-content-center align-items-center">
+        <h1>Form</h1>
+    </div>
+    <hr />
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <form asp-action="Login" post>
+                <div class="form-group">
+                    <label asp-for="Username" class="control-label"></label>
+                    <input asp-for="Username" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" type="text" class="form-control" />
+                </div>
+                <br />
+                <div class="form-group">
+
+                    <div class="row">
+                        <div class="col"><button class=" btn btn-secondary btn-sm float-left" asp-action="Registration" asp-controller="Account">Sign Up</button></div>
+                        <div class="col"><button class="btn btn-primary btn-sm float-right" type="submit">Sign In</button></div>
+                    </div>
+
+                </div>
+
+            </form>
+            @ViewBag.message;
+        </div>
+    </div>
+
+</body>
